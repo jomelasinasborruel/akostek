@@ -1,0 +1,21 @@
+.links-wrapper {
+  @apply max-w-[43.75rem] mx-auto h-full w-full flex justify-center gap-6 items-center;
+}
+
+.links-wrapper > div {
+  @apply flex justify-center items-center h-fit w-[5.625rem] text-[0.875rem];
+}
+
+.links-wrapper > div > div > a {
+  @apply font-rubik font-light text-white;
+}
+
+.link-underline {
+  @apply w-0 bg-white h-[0.0625rem] absolute top-6 left-0 transition-all duration-300;
+}
+
+.links-wrapper > div:hover {
+  .link-underline {
+    @apply w-full;
+  }
+}
