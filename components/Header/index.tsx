@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import clsx from "clsx";
 import Logo from "@/images/logo.png";
 import Image from "next/image";
+import Hamburger from "@/svg/hamburger.svg";
 
 // asasa
 const Header = () => {
@@ -45,7 +46,7 @@ const Header = () => {
           />
         </div>
 
-        <div className={s["links-wrapper"]}>
+        <div className={clsx(s["links-wrapper"], "lg:flex hidden")}>
           {navData.map((item, key) => (
             <div key={key}>
               <div className="relative transition-all duration-300">
@@ -59,6 +60,10 @@ const Header = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="lg:hidden flex ml-auto w-[1.25rem] ">
+          <Hamburger className="fill-white text-sm" />
         </div>
         <div />
       </div>

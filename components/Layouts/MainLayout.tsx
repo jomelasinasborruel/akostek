@@ -9,9 +9,9 @@ const Layout = ({ children }: { children: ReactNode }) => {
   const route = useRouter();
 
   return (
-    <div className="relative w-[100vw] h-[100vh] overflow-hidden">
+    <div className="relative w-full">
       <Image
-        className="absolute top-0 left-0 w-full h-full object-cover object-center opacity-75"
+        className="fixed top-0 left-0 w-full h-full object-cover object-center opacity-75"
         src={background}
         alt="background"
       />
