@@ -30,14 +30,14 @@ export const getServerSideProps = async () => {
   return { props: { result: JSON.stringify(result) } };
 };
 
-interface imageMeta {
+interface ImageMeta {
   asset_id: string;
   secure_url: string;
 }
 
 const Home: NextPageWithLayout = ({ result }: any) => {
-  const bannerImages: imageMeta[] = JSON.parse(result).resources;
-  // const [bannerImages, setBannerImages] = React.useState<Array<imageMeta>>([]);
+  const bannerImages: ImageMeta[] = JSON.parse(result).resources;
+  // const [bannerImages, setBannerImages] = React.useState<Array<ImageMeta>>([]);
 
   // const fetchImages = async () => {
   //   const response = await fetch("api/cloudinary");
@@ -45,7 +45,7 @@ const Home: NextPageWithLayout = ({ result }: any) => {
   //   const filterRes = res["message" as any];
   //   if (filterRes) {
   //     setBannerImages(
-  //       JSON.parse(filterRes).resources.map((item: imageMeta) => {
+  //       JSON.parse(filterRes).resources.map((item: ImageMeta) => {
   //         return { asset_id: item.asset_id, secure_url: item.secure_url };
   //       })
   //     );
